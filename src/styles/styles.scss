@@ -1,18 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-
-@font-face {
-    font-family: 'itcSouvenir';
-    font-style: normal;
-    font-weight: normal;
-    src: local('itcSouvenir'), url(../assets/fonts/SOUVENIRSTD-MEDIUM.OTF)
-}
-
-@font-face {
-    font-family: 'itcSouvenirLight';
-    font-style: normal;
-    font-weight: normal;
-    src: local('itcSouvenir'), url(../assets/fonts/SOUVENIRSTD-LIGHT.OTF)
-}
+@import './mixins';
 
 html {
     background: #FFF8F1;
@@ -63,6 +49,19 @@ body {
         font-size: 15px;
         text-align: left;
     }
+    @include tablet {
+        &__infoInitial {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__header {
+            margin: 25px 25px;
+        }
+        &__info {
+            margin: 0 25px;
+        }
+    }
 }
 
 .contactBox {
@@ -81,6 +80,9 @@ body {
 .projectBox {
     text-align: center;
     margin: 50px auto;
+    // &__textBox {
+
+    // }
     &__title {
         text-transform: capitalize;
         font-family: 'itcSouvenirLight', sans-serif;
@@ -90,15 +92,29 @@ body {
     }
     &__subtitle {
         width: 220px;
-       text-transform: uppercase;
-       font-family: 'Work Sans', sans-serif;
-       font-weight: lighter;
-       font-size: 18px;
-       margin: 0 auto;
+        text-transform: uppercase;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 18px;
+        margin: 0 auto;
     }
     &__image {
         width: 100%;
         height: auto;
         margin: 20px auto;
+    }
+    @include tablet {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        box-sizing: border-box;
+        &__image {
+            width: 420px;
+            margin-left: auto;
+            margin-right: 50px;
+        }
+        &__textBox {
+            margin-right: auto;
+        }
     }
 }
