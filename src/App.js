@@ -1,13 +1,15 @@
 import React from 'react';
-
-import './App.css';
+import { Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import Main from './pages/Main';
+import './styles/styles.css';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
-  );
+    <BrowserRouter>
+      <Route component={Main} />
+    </BrowserRouter>
+  )
 }
 
 export default App;
