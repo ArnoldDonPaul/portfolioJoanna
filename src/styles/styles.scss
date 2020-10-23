@@ -19,7 +19,6 @@ body {
     right: 0;
     margin: 0 auto;
     width: 100%;
-    height: auto;
     text-align: center;
     box-sizing: border-box;
     border: 1px solid black;
@@ -27,6 +26,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+    transition: max-height 0.8s;
     &__header {
         font-family: 'itcSouvenir', sans-serif;
         font-size: 48px;
@@ -34,14 +36,20 @@ body {
         margin: 30px auto 10px;
     }
     &__info {
+        width: fit-content;
         font-family: 'itcSouvenirLight', sans-serif;
         font-size: 24px;
         font-weight: lighter;
         margin: 0 auto 30px;
-        cursor: pointer;
+        cursor: pointer;  
     }
     &__info:hover {
         color: grey;
+    }
+    &__dropDown {
+        animation: growDown 300ms ease-in-out forwards;
+        transform-origin: top center;
+        margin-bottom: 20px;
     }
     &__infoExpanded {
         margin: 0 20px 30px;
@@ -80,22 +88,22 @@ body {
 .projectBox {
     text-align: center;
     margin: 50px auto;
-    // &__textBox {
-
-    // }
+    &__textBox {
+        margin: 0 10px;
+    }
     &__title {
         text-transform: capitalize;
         font-family: 'itcSouvenirLight', sans-serif;
         font-weight: lighter;
-        font-size: 40px;
+        font-size: 8vw;
         margin: 0 auto;
     }
     &__subtitle {
-        width: 220px;
+        width: fit-content;
         text-transform: uppercase;
         font-family: 'Work Sans', sans-serif;
         font-weight: lighter;
-        font-size: 18px;
+        font-size: 5vw;
         margin: 0 auto;
     }
     &__image {
@@ -108,13 +116,47 @@ body {
         flex-direction: row-reverse;
         align-items: center;
         box-sizing: border-box;
+        &__title {
+            font-size: 4.5vw;
+        }
+        &__subtitle {
+            width: 300px;
+            font-size: 2.25vw;
+        }
         &__image {
-            width: 420px;
+            width: 40%;
             margin-left: auto;
             margin-right: 50px;
         }
         &__textBox {
             margin-right: auto;
+            width: fit-content;
+        }
+    }
+    @include desktop {
+        margin-bottom: 80px;
+        &__textBox {
+            width: fit-content;
+        }
+        &__subtitle {
+            width: 400px;
+        }
+        &__image {
+            width: 50%;
         }
     }
 }
+
+@keyframes growDown {
+    0% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
