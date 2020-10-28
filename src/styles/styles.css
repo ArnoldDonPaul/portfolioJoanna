@@ -68,11 +68,11 @@ body {
   font-size: 24px;
   font-weight: lighter;
   margin: 0 auto 30px;
-  cursor: pointer;
 }
 
 .navBar__info:hover {
   color: grey;
+  cursor: pointer;
 }
 
 .navBar__dropDown {

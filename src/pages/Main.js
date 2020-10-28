@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import '../styles/styles.css';
-import nicCage from '../assets/images/conair.jpg'
+
+//Pictures
+import arcadianHero from '../assets/images/arcadian/p1.jpg'
+import bannockHero from '../assets/images/bannock/bannock-redesign_Page_1.jpg'
+import littlefootHero from '../assets/images/littlefoot/littlefoot-pixelphone.gif'
+import buffoHero from '../assets/images/buffo/buffo-menu1.jpg'
+import canteenHero from '../assets/images/canteen/canteen-live-eat-1618.jpg'
+import defaultwtfHero from '../assets/images/default.wtf/Chrome-Browser.gif'
+import babelHero from '../assets/images/babel/babel-businesscard-mock.jpg'
 
 class Main extends Component {
     state = {
@@ -47,60 +55,68 @@ class Main extends Component {
                 </nav>
 
                 <section>
+
+                    {/* Arcadian */}
                     <div className="projectBox">
                         <div className="projectBox__textBox">
                             <h1 className="projectBox__title">arcadian</h1>
                             <h2 className="projectBox__subtitle">menu / art direction</h2>
                         </div>
-                        <img className="projectBox__image" src={nicCage} alt="arcadian"></img>
+                        <img className="projectBox__image" src={arcadianHero} alt="arcadian"></img>
                     </div>
 
+                    {/* Bannock */}
                     <div className="projectBox">
                         <div className="projectBox__textBox">
                             <h1 className="projectBox__title">bannock</h1>
                             <h2 className="projectBox__subtitle">menu / art direction</h2>
                         </div>
-                        <img className="projectBox__image" src={nicCage} alt="bannock"></img>
+                        <img className="projectBox__image" src={bannockHero} alt="bannock"></img>
                     </div>
 
+                    {/* Little Foot */}
                     <div className="projectBox">
                         <div className="projectBox__textBox">
                             <h1 className="projectBox__title">little foot</h1>
                             <h2 className="projectBox__subtitle">user experience & interface</h2>
                         </div>
-                        <img className="projectBox__image" src={nicCage} alt="little foot"></img>
+                        <img className="projectBox__image" src={littlefootHero} alt="little foot"></img>
                     </div>
 
+                    {/* Buffo */}
                     <div className="projectBox">
                         <div className="projectBox__textBox">
                             <h1 className="projectBox__title">buffo</h1>
                             <h2 className="projectBox__subtitle">menu / typography</h2>
                         </div>
-                        <img className="projectBox__image" src={nicCage} alt="buffo"></img>
+                        <img className="projectBox__image" src={buffoHero} alt="buffo"></img>
                     </div>
 
+                    {/* Canteen */}
                     <div className="projectBox">
                         <div className="projectBox__textBox">
                             <h1 className="projectBox__title">canteen</h1>
                             <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
                         </div>
-                        <img className="projectBox__image" src={nicCage} alt="canteen"></img>
+                        <img className="projectBox__image" src={canteenHero} alt="canteen"></img>
                     </div>
 
+                    {/* Default.wtf */}
                     <div className="projectBox">
                         <div className="projectBox__textBox">
                             <h1 className="projectBox__title">default.wtf</h1>
                             <h2 className="projectBox__subtitle">research / web extension / thesis</h2>
                         </div>
-                        <img className="projectBox__image" src={nicCage} alt="default.wtf"></img>
+                        <img className="projectBox__image" src={defaultwtfHero} alt="default.wtf"></img>
                     </div>
 
+                    {/* Babel */}
                     <div className="projectBox">
                         <div className="projectBox__textBox">
                             <h1 className="projectBox__title">babel</h1>
                             <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
                         </div>
-                        <img className="projectBox__image" src={nicCage} alt="babel"></img>
+                        <img className="projectBox__image" src={babelHero} alt="babel"></img>
                     </div>
 
                 </section>

@@ -41,10 +41,10 @@ body {
         font-size: 24px;
         font-weight: lighter;
         margin: 0 auto 30px;
-        cursor: pointer;  
     }
     &__info:hover {
         color: grey;
+        cursor: pointer;  
     }
     &__dropDown {
         animation: growDown 300ms ease-in-out forwards;
