@@ -72,7 +72,7 @@ body {
 }
 
 .navBar__info:hover {
-  color: grey;
+  opacity: 0.5;
   cursor: pointer;
 }
 
@@ -174,6 +174,11 @@ body {
   margin: 0 10px;
 }
 
+.projectBox__textBox--mobile {
+  text-align: center;
+  margin: 20px auto;
+}
+
 .projectBox__title {
   text-transform: capitalize;
   font-family: 'itcSouvenirLight', sans-serif;
@@ -196,7 +201,11 @@ body {
 .projectBox__image {
   width: 100%;
   height: auto;
-  margin: 20px auto;
+  margin: 20px auto 0;
+}
+
+.projectBox__image--zoomed {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -225,12 +234,21 @@ body {
     width: 40%;
     margin-left: auto;
     margin-right: 50px;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+  }
+  .projectBox__image--zoomed {
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out;
   }
   .projectBox__textBox {
     margin-right: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .projectBox__textBox--mobile {
+    display: none;
   }
 }
 
@@ -255,6 +273,17 @@ body {
 .projectBox:hover {
   opacity: 0.5;
   z-index: 0;
+}
+
+.creator {
+  margin: 0 auto 15px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.creator:hover {
+  opacity: .75;
+  cursor: pointer;
 }
 
 @-webkit-keyframes growDown {

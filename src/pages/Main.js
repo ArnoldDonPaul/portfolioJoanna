@@ -9,10 +9,20 @@ import buffoHero from '../assets/images/buffo/buffo-menu1.jpg'
 import canteenHero from '../assets/images/canteen/canteen-live-eat-1618.jpg'
 import defaultwtfHero from '../assets/images/default.wtf/Chrome-Browser.gif'
 import babelHero from '../assets/images/babel/babel-businesscard-mock.jpg'
+import seakuraHero from '../assets/images/seakura/Seakura-logo.jpg'
 
 class Main extends Component {
     state = {
-        infoExpanded: false
+        infoExpanded: false,
+
+        canteenZoomed: false,
+        littlefootZoomed: false,
+        babelZoomed: false,
+        defaultwtfZoomed: false,
+        buffoZoomed: false,
+        seakuraZoomed: false,
+        bannockZoomed: false,
+        arcadianZoomed: false
     }
     render() {
         const openInNewTab = (url) => {
@@ -51,10 +61,10 @@ class Main extends Component {
                                             <a className="contactLink" href="mailto:hello@joanna.to">hello@joanna.to</a>
                                             <p>1 647 961 0759</p>
                                             <p className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>LinkedIn</p>
-                                            <p className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>Instagram</p>
+                                            <p className="contactLink" onClick={() => { openInNewTab('https://www.instagram.com/anotherjoanna/') }}>Instagram</p>
                                         </div>
                                         <div className="navBar__contactBox--tabletDesktop">
-                                            <p><span className="textBold">Contact:</span> <a className="contactLink" href="mailto:hello@joanna.to">hello@joanna.to</a> / 1 647 961 0759 / <span className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>LinkedIn</span> / <span className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>Instagram</span></p>
+                                            <p><span className="textBold">Contact:</span> <a className="contactLink" href="mailto:hello@joanna.to">hello@joanna.to</a> / 1 647 961 0759 / <span className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>LinkedIn</span> / <span className="contactLink" onClick={() => { openInNewTab('https://www.instagram.com/anotherjoanna/') }}>Instagram</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -65,70 +75,202 @@ class Main extends Component {
 
                 <section>
 
-                    {/* Arcadian */}
-                    <div className="projectBox">
-                        <div className="projectBox__textBox">
-                            <h1 className="projectBox__title">arcadian</h1>
-                            <h2 className="projectBox__subtitle">menu / art direction</h2>
-                        </div>
-                        <img className="projectBox__image" src={arcadianHero} alt="arcadian"></img>
-                    </div>
-
-                    {/* Bannock */}
-                    <div className="projectBox">
-                        <div className="projectBox__textBox">
-                            <h1 className="projectBox__title">bannock</h1>
-                            <h2 className="projectBox__subtitle">menu / art direction</h2>
-                        </div>
-                        <img className="projectBox__image" src={bannockHero} alt="bannock"></img>
-                    </div>
+                    {/* Canteen */}
+                    {
+                        this.state.canteenZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">canteen</h1>
+                                    <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
+                                </div>
+                                <img className="projectBox__image" src={canteenHero} alt="canteen" onClick={() => this.setState({ canteenZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.canteenZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">canteen</h1>
+                                    <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={canteenHero} alt="canteen" onClick={() => this.setState({ canteenZoomed: false })}></img>
+                            </>
+                        )
+                    }
 
                     {/* Little Foot */}
-                    <div className="projectBox">
-                        <div className="projectBox__textBox">
-                            <h1 className="projectBox__title">little foot</h1>
-                            <h2 className="projectBox__subtitle">user experience & interface</h2>
-                        </div>
-                        <img className="projectBox__image" src={littlefootHero} alt="little foot"></img>
-                    </div>
-
-                    {/* Buffo */}
-                    <div className="projectBox">
-                        <div className="projectBox__textBox">
-                            <h1 className="projectBox__title">buffo</h1>
-                            <h2 className="projectBox__subtitle">menu / typography</h2>
-                        </div>
-                        <img className="projectBox__image" src={buffoHero} alt="buffo"></img>
-                    </div>
-
-                    {/* Canteen */}
-                    <div className="projectBox">
-                        <div className="projectBox__textBox">
-                            <h1 className="projectBox__title">canteen</h1>
-                            <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
-                        </div>
-                        <img className="projectBox__image" src={canteenHero} alt="canteen"></img>
-                    </div>
-
-                    {/* Default.wtf */}
-                    <div className="projectBox">
-                        <div className="projectBox__textBox">
-                            <h1 className="projectBox__title">default.wtf</h1>
-                            <h2 className="projectBox__subtitle">research / web extension / thesis</h2>
-                        </div>
-                        <img className="projectBox__image" src={defaultwtfHero} alt="default.wtf"></img>
-                    </div>
+                    {
+                        this.state.littlefootZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">little foot</h1>
+                                    <h2 className="projectBox__subtitle">user experience & interface</h2>
+                                </div>
+                                <img className="projectBox__image" src={littlefootHero} alt="little foot" onClick={() => this.setState({ littlefootZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.littlefootZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">little foot</h1>
+                                    <h2 className="projectBox__subtitle">user experience & interface</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={littlefootHero} alt="little foot" onClick={() => this.setState({ littlefootZoomed: false })}></img>
+                            </>
+                        )
+                    }
 
                     {/* Babel */}
-                    <div className="projectBox">
-                        <div className="projectBox__textBox">
-                            <h1 className="projectBox__title">babel</h1>
-                            <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
-                        </div>
-                        <img className="projectBox__image" src={babelHero} alt="babel"></img>
-                    </div>
+                    {
+                        this.state.babelZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">babel</h1>
+                                    <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
+                                </div>
+                                <img className="projectBox__image" src={babelHero} alt="babel" onClick={() => this.setState({ babelZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.babelZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">babel</h1>
+                                    <h2 className="projectBox__subtitle">menu / typography / art direction</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={babelHero} alt="babel" onClick={() => this.setState({ babelZoomed: false })}></img>
+                            </>
+                        )
+                    }
 
+                    {/* Default.wtf */}
+                    {
+                        this.state.defaultwtfZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">default.wtf</h1>
+                                    <h2 className="projectBox__subtitle">research / web extension / thesis</h2>
+                                </div>
+                                <img className="projectBox__image" src={defaultwtfHero} alt="default.wtf" onClick={() => this.setState({ defaultwtfZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.defaultwtfZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">default.wtf</h1>
+                                    <h2 className="projectBox__subtitle">research / web extension / thesis</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={defaultwtfHero} alt="default.wtf" onClick={() => this.setState({ defaultwtfZoomed: false })}></img>
+                            </>
+                        )
+                    }
+
+                    {/* Buffo */}
+                    {
+                        this.state.buffoZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">buffo</h1>
+                                    <h2 className="projectBox__subtitle">menu / typography</h2>
+                                </div>
+                                <img className="projectBox__image" src={buffoHero} alt="buffo" onClick={() => this.setState({ buffoZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.buffoZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">buffo</h1>
+                                    <h2 className="projectBox__subtitle">menu / typography</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={buffoHero} alt="buffo" onClick={() => this.setState({ buffoZoomed: false })}></img>
+                            </>
+                        )
+                    }
+
+                    {/* Seakura */}
+                    {
+                        this.state.seakuraZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">seakura</h1>
+                                    <h2 className="projectBox__subtitle">branding</h2>
+                                </div>
+                                <img className="projectBox__image" src={seakuraHero} alt="seakura" onClick={() => this.setState({ seakuraZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.seakuraZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">seakura</h1>
+                                    <h2 className="projectBox__subtitle">branding</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={seakuraHero} alt="seakura" onClick={() => this.setState({ seakuraZoomed: false })}></img>
+                            </>
+                        )
+                    }
+
+
+                    {/* Bannock */}
+                    {
+                        this.state.bannockZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">bannock</h1>
+                                    <h2 className="projectBox__subtitle">menu / art direction</h2>
+                                </div>
+                                <img className="projectBox__image" src={bannockHero} alt="bannock" onClick={() => this.setState({ bannockZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.bannockZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">bannock</h1>
+                                    <h2 className="projectBox__subtitle">menu / art direction</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={bannockHero} alt="bannock" onClick={() => this.setState({ bannockZoomed: false })}></img>
+                            </>
+                        )
+                    }
+
+                    {/* Arcadian */}
+                    {
+                        this.state.arcadianZoomed === false && (
+                            <div className="projectBox">
+                                <div className="projectBox__textBox">
+                                    <h1 className="projectBox__title">arcadian</h1>
+                                    <h2 className="projectBox__subtitle">menu / art direction</h2>
+                                </div>
+                                <img className="projectBox__image" src={arcadianHero} alt="arcadian" onClick={() => this.setState({ arcadianZoomed: true })}></img>
+                            </div>
+                        )
+                    }
+                    {
+                        this.state.arcadianZoomed === true && (
+                            <>
+                                <div className="projectBox__textBox--mobile">
+                                    <h1 className="projectBox__title">arcadian</h1>
+                                    <h2 className="projectBox__subtitle">menu / art direction</h2>
+                                </div>
+                                <img className="projectBox__image--zoomed" src={arcadianHero} alt="arcadian" onClick={() => this.setState({ arcadianZoomed: false })}></img>
+                            </>
+                        )
+                    }
                 </section>
+                <footer>
+                    <p className="creator" onClick={() => { openInNewTab('https://www.donpaul.dev') }}>This website was made with <span role="img" aria-label="love">❤️</span> by Arnold Don Paul</p>
+                </footer>
             </>
         );
     }

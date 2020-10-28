@@ -44,7 +44,7 @@ body {
         margin: 0 auto 30px;
     }
     &__info:hover {
-        color: grey;
+        opacity: 0.5;
         cursor: pointer;  
     }
     &__dropDown {
@@ -129,6 +129,10 @@ body {
     margin: 50px auto;
     &__textBox {
         margin: 0 10px;
+        &--mobile {
+            text-align: center;
+            margin: 20px auto;
+        }
     }
     &__title {
         text-transform: capitalize;
@@ -148,7 +152,10 @@ body {
     &__image {
         width: 100%;
         height: auto;
-        margin: 20px auto;
+        margin: 20px auto 0;
+        &--zoomed {
+            width: 100%;
+        }
     }
     @include tablet {
         display: flex;
@@ -166,10 +173,17 @@ body {
             width: 40%;
             margin-left: auto;
             margin-right: 50px;
+            cursor: zoom-in;
+            &--zoomed {
+                cursor: zoom-out;
+            }
         }
         &__textBox {
             margin-right: auto;
             width: fit-content;
+            &--mobile {
+                display: none;
+            }
         }
     }
     @include desktop {
@@ -192,6 +206,21 @@ body {
     z-index: 0;
 }
 
+//Footer
+
+.creator {
+    margin: 0 auto 15px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.creator:hover {
+    opacity: .75;
+    cursor: pointer;
+}
+
+//Animation
+
 @keyframes growDown {
     0% {
       transform: scaleY(0);
@@ -205,6 +234,8 @@ body {
       opacity: 1;
     }
   }
+
+  //Highlight color
 
   ::-moz-selection{
     background: #f89856;
