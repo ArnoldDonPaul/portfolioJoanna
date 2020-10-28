@@ -126,12 +126,15 @@ body {
 
 .projectBox {
     text-align: center;
-    margin: 50px auto;
+    margin: 20px auto;
     &__textBox {
         margin: 0 10px;
         &--mobile {
             text-align: center;
             margin: 20px auto;
+        }
+        &--specialCase {
+            text-transform: lowercase;
         }
     }
     &__title {
@@ -139,7 +142,7 @@ body {
         font-family: 'itcSouvenirLight', sans-serif;
         font-weight: lighter;
         font-size: 8vw;
-        margin: 0 auto;
+        margin: 50px auto 0;
     }
     &__subtitle {
         width: fit-content;
@@ -158,6 +161,7 @@ body {
         }
     }
     @include tablet {
+        margin: 50px auto;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -175,7 +179,11 @@ body {
             margin-right: 50px;
             cursor: zoom-in;
             &--zoomed {
+                width: 80%;
+                margin: 0 auto;
                 cursor: zoom-out;
+                display: flex;
+                justify-self: center;
             }
         }
         &__textBox {
@@ -209,7 +217,7 @@ body {
 //Footer
 
 .creator {
-    margin: 0 auto 15px;
+    margin: 20px auto;
     font-size: 10px;
     text-align: center;
 }

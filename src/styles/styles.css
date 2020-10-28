@@ -167,7 +167,7 @@ body {
 
 .projectBox {
   text-align: center;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .projectBox__textBox {
@@ -179,12 +179,16 @@ body {
   margin: 20px auto;
 }
 
+.projectBox__textBox--specialCase {
+  text-transform: lowercase;
+}
+
 .projectBox__title {
   text-transform: capitalize;
   font-family: 'itcSouvenirLight', sans-serif;
   font-weight: lighter;
   font-size: 8vw;
-  margin: 0 auto;
+  margin: 50px auto 0;
 }
 
 .projectBox__subtitle {
@@ -210,6 +214,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .projectBox {
+    margin: 50px auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -238,8 +243,14 @@ body {
     cursor: zoom-in;
   }
   .projectBox__image--zoomed {
+    width: 80%;
+    margin: 0 auto;
     cursor: -webkit-zoom-out;
     cursor: zoom-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: center;
   }
   .projectBox__textBox {
     margin-right: auto;
@@ -276,7 +287,7 @@ body {
 }
 
 .creator {
-  margin: 0 auto 15px;
+  margin: 20px auto;
   font-size: 10px;
   text-align: center;
 }
