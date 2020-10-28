@@ -15,6 +15,10 @@ class Main extends Component {
         infoExpanded: false
     }
     render() {
+        const openInNewTab = (url) => {
+            const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+            if (newWindow) newWindow.opener = null
+        }
         return (
             <>
                 <nav className="navBar">
@@ -22,7 +26,7 @@ class Main extends Component {
                         {
                             this.state.infoExpanded === false && (
                                 <>
-                                    <h1 className="navBar__header">joanna.to</h1>
+                                    <a className="logoLink" href="#top"><h1 className="navBar__header" onClick={() => this.setState({ infoExpanded: true })}>joanna.to</h1></a>
                                     <h2 className="navBar__info" onClick={() => this.setState({ infoExpanded: true })}>information +</h2>
                                 </>
                             )
@@ -32,20 +36,25 @@ class Main extends Component {
                         this.state.infoExpanded === true && (
                             <>
                                 <div className="navBar__infoInitial">
-                                    <h1 className="navBar__header">joanna.to</h1>
+                                    <a className="logoLink" href="#top"><h1 className="navBar__header">joanna.to</h1></a>
                                     <h2 className="navBar__info" onClick={() => this.setState({ infoExpanded: false })}>information −</h2>
                                 </div>
                                 <div className="navBar__dropDown">
-                                    <p className="navBar__infoExpanded">i'm a graphic designer based in toronto, canada.</p>
-                                    <p className="navBar__infoExpanded">* i’m currently an intermediate designer at oliver & bonacini hospitality</p>
-                                    <div className="contactBox">
-                                        <div className="contactBox__direct">
-                                            <p>hello@joanna.to</p>
+                                    <p className="navBar__infoExpanded">
+                                        Hi, my name is Joanna and I’m a Toronto-based graphic designer.
+                                        My work consists of branding, editorial, art direction, print, digital, user experience, research, copywriting, editing;
+                                        I’m a generalist unicorn in pursuit of the big picture and new ventures.
+                                    </p>
+                                    <div className="navBar__contactBox">
+                                        <div className="navBar__contactBox--mobile">
+                                            <p className="textBold">Contact:</p>
+                                            <a className="contactLink" href="mailto:hello@joanna.to">hello@joanna.to</a>
                                             <p>1 647 961 0759</p>
+                                            <p className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>LinkedIn</p>
+                                            <p className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>Instagram</p>
                                         </div>
-                                        <div className="contactBox__social">
-                                            <p>linkedin</p>
-                                            <p>instagram</p>
+                                        <div className="navBar__contactBox--tabletDesktop">
+                                            <p><span className="textBold">Contact:</span> <a className="contactLink" href="mailto:hello@joanna.to">hello@joanna.to</a> / 1 647 961 0759 / <span className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>LinkedIn</span> / <span className="contactLink" onClick={() => { openInNewTab('https://www.linkedin.com/in/joannagutowska/') }}>Instagram</span></p>
                                         </div>
                                     </div>
                                 </div>

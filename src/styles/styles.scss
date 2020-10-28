@@ -18,6 +18,7 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
+    z-index: 1;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
@@ -54,8 +55,25 @@ body {
     &__infoExpanded {
         margin: 0 20px 30px;
         font-family: 'Work Sans', sans-serif;
-        font-size: 15px;
+        font-size: 18px;
         text-align: left;
+    }
+    &__contactBox {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 18px;
+        &--mobile {
+            width: 100%;
+            margin-left: 20px;
+            display: unset;
+        }
+        &--tabletDesktop {
+            display: none;
+        }
     }
     @include tablet {
         &__infoInitial {
@@ -63,24 +81,45 @@ body {
             align-items: center;
             justify-content: space-between;
         }
+        &__infoExpanded {
+            width: 75%;
+        }
         &__header {
             margin: 25px 25px;
         }
         &__info {
             margin: 0 25px;
         }
+        &__contactBox {
+            &--mobile {
+                display: none;
+            }
+            &--tabletDesktop {
+                width: 100%;
+                margin-left: 20px;
+                display: unset;
+            }
+        }
     }
 }
 
-.contactBox {
-    display: flex;
-    justify-content: space-evenly;
-    &__direct {
-        text-align: left;
-    }
-    &__social {
-        text-align: left;
-    }
+.logoLink {
+    text-decoration: none;
+    color: black;
+}
+
+.contactLink {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.contactLink:hover {
+    text-decoration: underline;
+}
+
+.textBold {
+    font-weight: bold;
 }
 
 //PROJECT: ARCADIAN
@@ -139,6 +178,7 @@ body {
             width: fit-content;
         }
         &__subtitle {
+            font-size: 1.75vw;
             width: 400px;
         }
         &__image {
@@ -147,16 +187,28 @@ body {
     }
 }
 
+.projectBox:hover {
+    opacity: 0.5;
+    z-index: 0;
+}
+
 @keyframes growDown {
     0% {
       transform: scaleY(0);
       opacity: 0;
     }
     80% {
-        transform: scaleY(1.1);
+        transform: scaleY(1.05);
     }
     100% {
       transform: scaleY(1);
       opacity: 1;
     }
+  }
+
+  ::-moz-selection{
+    background: #f89856;
+  }
+  ::selection{
+    background: #f89856;
   }
