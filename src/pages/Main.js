@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/styles.css';
 
 //Pictures
 import arcadianHero from '../assets/images/arcadian/p1.jpg'
