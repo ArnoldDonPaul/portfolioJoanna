@@ -1,31 +1,13 @@
-@import './variables';
+@import './variables.scss';
 
 @mixin tablet {
-    @media screen and (min-width: $tablet-breakpoint / 2) {
+    @media screen and (min-width: $tablet-breakpoint) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media screen and (min-width: $desktop-breakpoint / 2) {
+    @media screen and (min-width: $desktop-breakpoint) {
         @content;
     }
-}
-
-//FONTS
-
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-
-@font-face {
-    font-family: 'itcSouvenir';
-    font-style: normal;
-    font-weight: normal;
-    src: local('itcSouvenir'), url(../assets/fonts/SOUVENIRSTD-MEDIUM.OTF)
-}
-
-@font-face {
-    font-family: 'itcSouvenirLight';
-    font-style: normal;
-    font-weight: normal;
-    src: local('itcSouvenir'), url(../assets/fonts/SOUVENIRSTD-LIGHT.OTF)
 }

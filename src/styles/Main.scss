@@ -1,0 +1,37 @@
+@import './mixins.scss';
+@import './fonts.scss';
+
+html {
+    background: #FFF8F1;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 500px;
+    margin: 200px 0 0 0;
+}
+
+//Animation
+
+@keyframes growDown {
+    0% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    80% {
+        transform: scaleY(1.05);
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  //Highlight color
+
+  ::-moz-selection{
+    background: #f89856;
+  }
+  ::selection{
+    background: #f89856;
+  }

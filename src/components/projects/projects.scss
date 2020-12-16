@@ -1,0 +1,131 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts';
+
+//PROJECT
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    opacity: .5;
+}
+
+.projectBox {
+    text-align: center;
+    margin: 20px auto;
+    height: auto;
+    &__textBox {
+        margin: 0 10px;
+        &--mobile {
+            text-align: center;
+            margin: 20px auto;
+        }
+        &--specialCase {
+            text-transform: lowercase;
+        }
+    }
+    &__title {
+        text-transform: capitalize;
+        text-decoration: none;
+        color: black;
+        font-family: 'itcSouvenirLight', sans-serif;
+        font-weight: lighter;
+        font-size: 8vw;
+        margin: 50px auto 0;
+    }
+    &__subtitle {
+        width: fit-content;
+        text-transform: uppercase;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 5vw;
+        margin: 0 auto;
+    }
+    &__link {
+        display: none;
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        margin: 20px auto 0;
+        &--zoomed {
+            width: 100%;
+        }
+    }
+    @include tablet {
+        margin: 50px auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        &__title {
+            font-size: 4.5vw;
+        }
+        &__subtitle {
+            width: 300px;
+            font-size: 2.25vw;
+            margin-bottom: 15px;
+        }
+        &__link {
+            display: unset;
+            width: 300px;
+            text-transform: uppercase;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: lighter;
+            font-size: 2.25vw;
+            margin: 0 auto;
+        }
+        &__image {
+            width: 40%;
+            margin-left: auto;
+            margin-right: 50px;
+            cursor: zoom-in;
+            &--zoomed {
+                width: 80%;
+                margin: 0 auto;
+                cursor: zoom-out;
+                display: flex;
+                justify-self: center;
+            }
+        }
+        &__textBox {
+            margin-right: auto;
+            width: fit-content;
+            &--mobile {
+                display: none;
+            }
+        }
+        .projectBox:hover {
+            opacity: 0.5;
+            z-index: 0;
+        }
+    }
+    @include desktop {
+        margin-bottom: 80px;
+        &__textBox {
+            width: fit-content;
+        }
+        &__subtitle {
+            font-size: 1.75vw;
+            width: 400px;
+        }
+        &__image {
+            width: 50%;
+        }
+    }
+}
+
+.pageLink {
+    position: absolute;
+    background-color: red;
+    // opacity: 0;
+    margin-left: -50%;
+    width: 100%;
+    height: inherit;
+    @include tablet {
+        display: none;
+    }
+}

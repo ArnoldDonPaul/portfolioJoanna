@@ -1,0 +1,115 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts';
+//NAV BAR
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #FFF8F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+    transition: max-height 0.8s;
+    &__header {
+        font-family: 'itcSouvenir', sans-serif;
+        font-size: 48px;
+        font-weight: lighter;
+        margin: 30px auto 10px;
+    }
+    &__info {
+        width: fit-content;
+        font-family: 'itcSouvenirLight', sans-serif;
+        font-size: 24px;
+        font-weight: lighter;
+        margin: 0 auto 30px;
+    }
+    &__dropDown {
+        animation: growDown 300ms ease-in-out forwards;
+        transform-origin: top center;
+        margin-bottom: 20px;
+    }
+    &__infoExpanded {
+        margin: 0 20px 30px;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 18px;
+        text-align: left;
+    }
+    &__contactBox {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 18px;
+        &--mobile {
+            width: 100%;
+            margin-left: 20px;
+            display: unset;
+        }
+        &--tabletDesktop {
+            display: none;
+        }
+    }
+    @include tablet {
+        &__infoInitial {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__infoExpanded {
+            width: 75%;
+        }
+        &__header {
+            margin: 25px 25px;
+        }
+        &__info {
+            margin: 0 25px;
+        }
+        &__info:hover {
+            opacity: 0.5;
+            cursor: pointer;  
+        }
+        &__contactBox {
+            &--mobile {
+                display: none;
+            }
+            &--tabletDesktop {
+                width: 100%;
+                margin-left: 20px;
+                display: unset;
+            }
+        }
+    }
+}
+
+.logoLink {
+    text-decoration: none;
+    color: black;
+}
+
+.contactLink {
+    text-decoration: none;
+    color: black;
+}
+
+@include tablet {
+    .contactLink:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.textBold {
+    font-weight: bold;
+}

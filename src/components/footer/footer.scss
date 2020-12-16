@@ -1,0 +1,14 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts';
+
+//Footer
+.creator {
+    margin: 20px auto;
+    font-size: 10px;
+    text-align: center;
+}
+
+.creator:hover {
+    opacity: .75;
+    cursor: pointer;
+}

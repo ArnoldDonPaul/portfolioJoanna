@@ -1,13 +1,20 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
+import { BrowserRouter, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
+
+import Nav from './components/nav/nav';
 import Main from './pages/Main';
-import './styles/styles.scss';
+import ProjectTest from './pages/ProjectTest/projectTest';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
     <BrowserRouter>
-      <Route component={Main} />
+      <Nav />
+      <Switch>
+        <Route exact path='/' component={Main} />
+        <Route path='/projectTest' component = {ProjectTest} />
+      </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }
