@@ -1,0 +1,55 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/fonts';
+
+body {
+    @include tablet {
+        margin-top: 150px;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        text-transform: capitalize;
+        font-family: 'itcSouvenirLight', sans-serif;
+        font-weight: lighter;
+        font-size: 8vw;
+        margin: 0 20px;
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 5vw;
+        margin: 0 20px 20px;
+    }
+    &__text {
+        font-family: 'Work Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 4.5vw;
+        margin: 15px 20px;
+    }
+    &__image {
+        width: 100%;
+        margin: 15px 0;
+    }
+    @include tablet {
+        &__title {
+            font-size: 4.5vw;
+            margin-left: 50px
+        }
+        &__subtitle {
+            font-size: 2.25vw;
+            margin-left: 50px
+        }
+        &__text {
+            font-size: 2.25vw;
+            margin: 50px;
+        }
+        &__image {
+            width: 85%;
+            margin: 20px auto;
+        }
+    }
+}

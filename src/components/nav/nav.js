@@ -18,7 +18,7 @@ class Nav extends Component {
                         {
                             this.state.infoExpanded === false && (
                                 <>
-                                    <Link className="logoLink" to='/' href="#top"><h1 className="navBar__header" onClick={() => this.setState({ infoExpanded: true, canteenZoomed: false, littlefootZoomed: false, babelZoomed: false, defaultwtfZoomed: false, buffoZoomed: false, seakuraZoomed: false, bannockZoomed: false, arcadianZoomed: false })}>joanna.to</h1></Link>
+                                    <Link className="logoLink" href="#top" to='/'><h1 className="navBar__header" onClick={() => this.setState({ infoExpanded: true, canteenZoomed: false, littlefootZoomed: false, babelZoomed: false, defaultwtfZoomed: false, buffoZoomed: false, seakuraZoomed: false, bannockZoomed: false, arcadianZoomed: false })}>joanna.to</h1></Link>
                                     <h2 className="navBar__info" onClick={() => this.setState({ infoExpanded: true })}>information +</h2>
                                 </>
                             )
@@ -28,7 +28,7 @@ class Nav extends Component {
                         this.state.infoExpanded === true && (
                             <>
                                 <div className="navBar__infoInitial">
-                                    <a className="logoLink" href="#top"><h1 className="navBar__header">joanna.to</h1></a>
+                                    <Link className="logoLink" to='/' href="#top"><h1 className="navBar__header">joanna.to</h1></Link>
                                     <h2 className="navBar__info" onClick={() => this.setState({ infoExpanded: false })}>information −</h2>
                                 </div>
                                 <div className="navBar__dropDown">
