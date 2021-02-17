@@ -1,9 +1,29 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/fonts';
+@import './mixins';
+@import './fonts';
 
 body {
     @include tablet {
         margin-top: 150px;
+    }
+}
+
+.emphasis {
+    font-weight: bold;
+}
+
+.multiImageBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prototype {
+    width: 100%;
+    height: 1100px;
+    margin: 15px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    @include tablet {
+        width: 85%;
+        margin: 20px auto;
     }
 }
 
@@ -24,15 +44,21 @@ body {
         font-size: 5vw;
         margin: 0 20px 20px;
     }
+    &__textBox {
+        margin: 15px 0;
+    }
     &__text {
         font-family: 'Work Sans', sans-serif;
         font-weight: lighter;
         font-size: 4.5vw;
-        margin: 15px 20px;
+        margin: 0 20px;
     }
     &__image {
         width: 100%;
         margin: 15px 0;
+    }
+    &__multiImage {
+        width: 48%;
     }
     @include tablet {
         &__title {
@@ -43,12 +69,20 @@ body {
             font-size: 2.25vw;
             margin-left: 50px
         }
+        &__textBox {
+            margin: 25px 0;
+        }
         &__text {
+            width: 85%;
             font-size: 2.25vw;
-            margin: 50px;
+            margin: 0 auto;
         }
         &__image {
             width: 85%;
+            margin: 20px auto;
+        }
+        &__multiImage {
+            width: 35%;
             margin: 20px auto;
         }
     }

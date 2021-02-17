@@ -8,7 +8,7 @@ import bannockHero from '../../assets/images/bannock/bannock-redesign_Page_1.jpg
 import littlefootHero from '../../assets/images/littlefoot/littlefoot-pixelphone.gif'
 import buffoHero from '../../assets/images/buffo/buffo-menu1.jpg'
 import canteenHero from '../../assets/images/canteen/canteen-live-eat-1618.jpg'
-import defaultwtfHero from '../../assets/images/default.wtf/Chrome-Browser.gif'
+import defaultwtfHero from '../../assets/images/defaultWTF/Chrome-Browser.gif'
 import babelHero from '../../assets/images/babel/babel-businesscard-mock.jpg'
 import seakuraHero from '../../assets/images/seakura/Seakura-logo.jpg'
 
@@ -32,7 +32,7 @@ class Projects extends Component {
                     this.state.canteenZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
+                                <Link className="link" to='/canteen'>
                                     <h1 className="projectBox__title">canteen</h1>
                                     <h2 className="projectBox__subtitle">typography / art direction</h2>
                                     <h3 className="projectBox__link">view project {">"}</h3>
@@ -47,7 +47,7 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                    <Link className="link" to='/projectTest'>
+                                    <Link className="link" to='/canteen'>
                                         <h1 className="projectBox__title">canteen</h1>
                                         <h2 className="projectBox__subtitle">typography / art direction</h2>
                                         <h3 className="projectBox__link">view project {">"}</h3>
@@ -65,7 +65,7 @@ class Projects extends Component {
                     this.state.littlefootZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
+                                <Link className="link" to='/littleFoot'>
                                     <h1 className="projectBox__title">little foot</h1>
                                     <h2 className="projectBox__subtitle">ui / ux</h2>
                                     <h3 className="projectBox__link">view project {">"}</h3>
@@ -80,7 +80,7 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                    <Link className="link" to='/projectTest'>
+                                    <Link className="link" to='/littleFoot'>
                                         <h1 className="projectBox__title">little foot</h1>
                                         <h2 className="projectBox__subtitle">ui / ux</h2>
                                         <h3 className="projectBox__link">view project {">"}</h3>
@@ -97,11 +97,11 @@ class Projects extends Component {
                     this.state.babelZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                            <Link className="link" to='/projectTest'>
-                                <h1 className="projectBox__title">babel</h1>
-                                <h2 className="projectBox__subtitle">branding / art direction</h2>
-                                <h3 className="projectBox__link">view project {">"}</h3>
-                            </Link>
+                                <Link className="link" to='/babel'>
+                                    <h1 className="projectBox__title">babel</h1>
+                                    <h2 className="projectBox__subtitle">branding / art direction</h2>
+                                    <h3 className="projectBox__link">view project {">"}</h3>
+                                </Link>
                             </div>
                             <img className="projectBox__image" src={babelHero} alt="babel" onClick={() => this.setState({ babelZoomed: true })}></img>
                         </div>
@@ -112,11 +112,11 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
-                                    <h1 className="projectBox__title">babel</h1>
-                                    <h2 className="projectBox__subtitle">branding / art direction</h2>
-                                    <h3 className="projectBox__link">view project {">"}</h3>
-                                </Link>
+                                    <Link className="link" to='/babel'>
+                                        <h1 className="projectBox__title">babel</h1>
+                                        <h2 className="projectBox__subtitle">branding / art direction</h2>
+                                        <h3 className="projectBox__link">view project {">"}</h3>
+                                    </Link>
                                 </div>
                             </div>
                             <img className="projectBox__image--zoomed" src={babelHero} alt="babel" onClick={() => this.setState({ babelZoomed: false })}></img>
@@ -129,10 +129,10 @@ class Projects extends Component {
                     this.state.defaultwtfZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                            <Link className="link" to='/projectTest'>
-                                <h1 className="projectBox__title">default.<span className="projectBox__textBox--specialCase">wtf</span></h1>
-                                <h2 className="projectBox__subtitle">web extension / thesis</h2>
-                                <h3 className="projectBox__link">view project {">"}</h3>
+                                <Link className="link" to='/defaultWTF'>
+                                    <h1 className="projectBox__title">default.<span className="projectBox__textBox--specialCase">wtf</span></h1>
+                                    <h2 className="projectBox__subtitle">web extension / thesis</h2>
+                                    <h3 className="projectBox__link">view project {">"}</h3>
                                 </Link>
                             </div>
                             <img className="projectBox__image" src={defaultwtfHero} alt="default.wtf" onClick={() => this.setState({ defaultwtfZoomed: true })}></img>
@@ -144,11 +144,11 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
-                                    <h1 className="projectBox__title">default.<span className="projectBox__textBox--specialCase">wtf</span></h1>
-                                    <h2 className="projectBox__subtitle">web extension / thesis</h2>
-                                    <h3 className="projectBox__link">view project {">"}</h3>
-                                </Link>
+                                    <Link className="link" to='/defaultWTF'>
+                                        <h1 className="projectBox__title">default.<span className="projectBox__textBox--specialCase">wtf</span></h1>
+                                        <h2 className="projectBox__subtitle">web extension / thesis</h2>
+                                        <h3 className="projectBox__link">view project {">"}</h3>
+                                    </Link>
                                 </div>
                             </div>
                             <img className="projectBox__image--zoomed" src={defaultwtfHero} alt="default.wtf" onClick={() => this.setState({ defaultwtfZoomed: false })}></img>
@@ -161,10 +161,10 @@ class Projects extends Component {
                     this.state.buffoZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                            <Link className="link" to='/projectTest'>
-                                <h1 className="projectBox__title">buffo</h1>
-                                <h2 className="projectBox__subtitle">branding / typography</h2>
-                                <h3 className="projectBox__link">view project {">"}</h3>
+                                <Link className="link" to='/buffo'>
+                                    <h1 className="projectBox__title">buffo</h1>
+                                    <h2 className="projectBox__subtitle">branding / typography</h2>
+                                    <h3 className="projectBox__link">view project {">"}</h3>
                                 </Link>
                             </div>
                             <img className="projectBox__image" src={buffoHero} alt="buffo" onClick={() => this.setState({ buffoZoomed: true })}></img>
@@ -176,11 +176,11 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
-                                    <h1 className="projectBox__title">buffo</h1>
-                                    <h2 className="projectBox__subtitle">branding / typography</h2>
-                                    <h3 className="projectBox__link">view project {">"}</h3>
-                                </Link>
+                                    <Link className="link" to='/buffo'>
+                                        <h1 className="projectBox__title">buffo</h1>
+                                        <h2 className="projectBox__subtitle">branding / typography</h2>
+                                        <h3 className="projectBox__link">view project {">"}</h3>
+                                    </Link>
                                 </div>
                             </div>
                             <img className="projectBox__image--zoomed" src={buffoHero} alt="buffo" onClick={() => this.setState({ buffoZoomed: false })}></img>
@@ -193,10 +193,10 @@ class Projects extends Component {
                     this.state.seakuraZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                            <Link className="link" to='/projectTest'>
-                                <h1 className="projectBox__title">seakura</h1>
-                                <h2 className="projectBox__subtitle">branding / social media</h2>
-                                <h3 className="projectBox__link">view project {">"}</h3>
+                                <Link className="link" to='/seakura'>
+                                    <h1 className="projectBox__title">seakura</h1>
+                                    <h2 className="projectBox__subtitle">branding / social media</h2>
+                                    <h3 className="projectBox__link">view project {">"}</h3>
                                 </Link>
                             </div>
                             <img className="projectBox__image" src={seakuraHero} alt="seakura" onClick={() => this.setState({ seakuraZoomed: true })}></img>
@@ -208,11 +208,11 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
-                                    <h1 className="projectBox__title">seakura</h1>
-                                    <h2 className="projectBox__subtitle">branding / social media</h2>
-                                    <h3 className="projectBox__link">view project {">"}</h3>
-                                </Link>
+                                    <Link className="link" to='/seakura'>
+                                        <h1 className="projectBox__title">seakura</h1>
+                                        <h2 className="projectBox__subtitle">branding / social media</h2>
+                                        <h3 className="projectBox__link">view project {">"}</h3>
+                                    </Link>
                                 </div>
                             </div>
                             <img className="projectBox__image--zoomed" src={seakuraHero} alt="seakura" onClick={() => this.setState({ seakuraZoomed: false })}></img>
@@ -226,10 +226,10 @@ class Projects extends Component {
                     this.state.bannockZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                            <Link className="link" to='/projectTest'>
-                                <h1 className="projectBox__title">bannock</h1>
-                                <h2 className="projectBox__subtitle">menu / art direction</h2>
-                                <h3 className="projectBox__link">view project {">"}</h3>
+                                <Link className="link" to='/bannock'>
+                                    <h1 className="projectBox__title">bannock</h1>
+                                    <h2 className="projectBox__subtitle">menu / art direction</h2>
+                                    <h3 className="projectBox__link">view project {">"}</h3>
                                 </Link>
                             </div>
                             <img className="projectBox__image" src={bannockHero} alt="bannock" onClick={() => this.setState({ bannockZoomed: true })}></img>
@@ -241,11 +241,11 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
-                                    <h1 className="projectBox__title">bannock</h1>
-                                    <h2 className="projectBox__subtitle">menu / art direction</h2>
-                                    <h3 className="projectBox__link">view project {">"}</h3>
-                                </Link>
+                                    <Link className="link" to='/bannock'>
+                                        <h1 className="projectBox__title">bannock</h1>
+                                        <h2 className="projectBox__subtitle">menu / art direction</h2>
+                                        <h3 className="projectBox__link">view project {">"}</h3>
+                                    </Link>
                                 </div>
                             </div>
                             <img className="projectBox__image--zoomed" src={bannockHero} alt="bannock" onClick={() => this.setState({ bannockZoomed: false })}></img>
@@ -258,10 +258,10 @@ class Projects extends Component {
                     this.state.arcadianZoomed === false && (
                         <div className="projectBox">
                             <div className="projectBox__textBox">
-                            <Link className="link" to='/projectTest'>
-                                <h1 className="projectBox__title">arcadian</h1>
-                                <h2 className="projectBox__subtitle">menu / typography</h2>
-                                <h3 className="projectBox__link">view project {">"}</h3>
+                                <Link className="link" to='/arcadian'>
+                                    <h1 className="projectBox__title">arcadian</h1>
+                                    <h2 className="projectBox__subtitle">menu / typography</h2>
+                                    <h3 className="projectBox__link">view project {">"}</h3>
                                 </Link>
                             </div>
                             <img className="projectBox__image" src={arcadianHero} alt="arcadian" onClick={() => this.setState({ arcadianZoomed: true })}></img>
@@ -273,11 +273,11 @@ class Projects extends Component {
                         <>
                             <div className="projectBox__textBox--mobile">
                                 <div className="projectBox__textBox">
-                                <Link className="link" to='/projectTest'>
-                                    <h1 className="projectBox__title">arcadian</h1>
-                                    <h2 className="projectBox__subtitle">menu / typography</h2>
-                                    <h3 className="projectBox__link">view project {">"}</h3>
-                                </Link>
+                                    <Link className="link" to='/arcadian'>
+                                        <h1 className="projectBox__title">arcadian</h1>
+                                        <h2 className="projectBox__subtitle">menu / typography</h2>
+                                        <h3 className="projectBox__link">view project {">"}</h3>
+                                    </Link>
                                 </div>
                             </div>
                             <img className="projectBox__image--zoomed" src={arcadianHero} alt="arcadian" onClick={() => this.setState({ arcadianZoomed: false })}></img>
