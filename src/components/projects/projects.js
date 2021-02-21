@@ -11,6 +11,8 @@ import canteenHero from '../../assets/images/canteen/canteen-live-eat-1618.jpg'
 import defaultwtfHero from '../../assets/images/defaultWTF/Chrome-Browser.gif'
 import babelHero from '../../assets/images/babel/babel-businesscard-mock.jpg'
 import seakuraHero from '../../assets/images/seakura/Seakura-logo.jpg'
+import eNewsletterHero from '../../assets/images/seakura/Seakura-logo.jpg'
+
 
 class Projects extends Component {
     state = {
@@ -21,7 +23,8 @@ class Projects extends Component {
         buffoZoomed: false,
         seakuraZoomed: false,
         bannockZoomed: false,
-        arcadianZoomed: false
+        arcadianZoomed: false,
+        eNewsletterZoomed: false
     }
     render() {
         return (
@@ -281,6 +284,38 @@ class Projects extends Component {
                                 </div>
                             </div>
                             <img className="projectBox__image--zoomed" src={arcadianHero} alt="arcadian" onClick={() => this.setState({ arcadianZoomed: false })}></img>
+                        </>
+                    )
+                }
+
+                {/* E-Newsletters */}
+                {
+                    this.state.eNewsletterZoomed === false && (
+                        <div className="projectBox">
+                            <div className="projectBox__textBox">
+                                <Link className="link" to='/eNewsletter'>
+                                    <h1 className="projectBox__title">e-Newsletter</h1>
+                                    <h2 className="projectBox__subtitle">design / typography / copywriting</h2>
+                                    <h3 className="projectBox__link">view project {">"}</h3>
+                                </Link>
+                            </div>
+                            <img className="projectBox__image" src={eNewsletterHero} alt="e-newsletters" onClick={() => this.setState({ eNewsletterZoomed: true })}></img>
+                        </div>
+                    )
+                }
+                {
+                    this.state.eNewsletterZoomed === true && (
+                        <>
+                            <div className="projectBox__textBox--mobile">
+                                <div className="projectBox__textBox">
+                                    <Link className="link" to='/eNewsletter'>
+                                        <h1 className="projectBox__title">e-Newsletter</h1>
+                                        <h2 className="projectBox__subtitle">design / typography / copywriting</h2>
+                                        <h3 className="projectBox__link">view project {">"}</h3>
+                                    </Link>
+                                </div>
+                            </div>
+                            <img className="projectBox__image--zoomed" src={eNewsletterHero} alt="e-newsletters" onClick={() => this.setState({ eNewsletterZoomed: false })}></img>
                         </>
                     )
                 }

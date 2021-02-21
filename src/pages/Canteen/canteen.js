@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import canteen1 from '../../assets/images/canteen/canteen-live-eat-1618.jpg'
@@ -33,6 +34,11 @@ class Canteen extends Component {
                 <img className="project__image" alt="Canteen" src={canteen5}></img>
                 <img className="project__image" alt="Canteen" src={canteen6}></img>
                 <img className="project__image" alt="Canteen" src={canteen7}></img>
+            
+                <div className="project__nav">
+                    <Link to='/eNewsletter' className="project__last">&lt; Last Project: E-Newsletter</Link>
+                    <Link to='/littleFoot' className="project__next">Next Project: Little Foot &gt;</Link>
+                </div>
             </section>
         );
     }

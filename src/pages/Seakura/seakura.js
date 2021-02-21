@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import seakura1 from '../../assets/images/seakura/Seakura-logo.jpg'
@@ -27,6 +28,11 @@ class Seakura extends Component {
                     </div>
                 </div>
                 <img className="project__image" alt="Seakura" src={seakura2}></img>
+            
+                <div className="project__nav">
+                    <Link to='/buffo' className="project__last">&lt; Last Project: Buffo</Link>
+                    <Link to='/bannock' className="project__next">Next Project: Bannock &gt;</Link>
+                </div>
             </section>
         );
     }

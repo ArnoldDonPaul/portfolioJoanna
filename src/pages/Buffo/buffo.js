@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import buffo1 from '../../assets/images/buffo/IMG_1378.jpg'
@@ -38,6 +39,11 @@ class Buffo extends Component {
                 <img className="project__image" alt="Buffo" src={buffo5}></img>
                 <img className="project__image" alt="Buffo" src={buffo6}></img>
                 <img className="project__image" alt="Buffo" src={buffo7}></img>
+            
+                <div className="project__nav">
+                    <Link to='/defaultWTF' className="project__last">&lt; Last Project: Default.wtf</Link>
+                    <Link to='/seakura' className="project__next">Next Project: Seakura &gt;</Link>
+                </div>
             </section>
         );
     }

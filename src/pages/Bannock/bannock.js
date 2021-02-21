@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import bannock1 from '../../assets/images/bannock/bannock-redesign_Page_3.jpg'
@@ -35,6 +36,11 @@ class Bannock extends Component {
                 <img className="project__image" alt="Bannock" src={bannock2}></img>
                 <img className="project__image" alt="Bannock" src={bannock3}></img>
                 <img className="project__image" alt="Bannock" src={bannock4}></img>
+            
+                <div className="project__nav">
+                    <Link to='/seakura' className="project__last">&lt; Last Project: Seakura</Link>
+                    <Link to='/arcadian' className="project__next">Next Project: Arcadian &gt;</Link>
+                </div>
             </section>
         );
     }

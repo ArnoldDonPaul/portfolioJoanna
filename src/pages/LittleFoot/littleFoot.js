@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import littleFoot1 from '../../assets/images/littlefoot/LF-Vertical-ANGLED-LEFT.jpg'
@@ -28,6 +29,11 @@ class LittleFoot extends Component {
                 <img className="project__image" alt="Little Foot" src={littleFoot3}></img>
                 <img className="project__image" alt="Little Foot" src={littleFoot4}></img>
                 <img className="project__image" alt="Little Foot" src={littleFoot5}></img>
+
+                <div className="project__nav">
+                    <Link to='/canteen' className="project__last">&lt; Last Project: Canteen</Link>
+                    <Link to='/babel' className="project__next">Next Project: Babel &gt;</Link>
+                </div>
             </section>
         );
     }

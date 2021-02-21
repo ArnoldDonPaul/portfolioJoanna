@@ -12,6 +12,7 @@ import Canteen from './pages/Canteen/canteen';
 import DefaultWTF from './pages/DefaultWTF/defaultWTF';
 import LittleFoot from './pages/LittleFoot/littleFoot';
 import Seakura from './pages/Seakura/seakura';
+import ENewsletter from './pages/ENewsletter/eNewsletter';
 import Footer from './components/footer/footer';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/defaultWTF' component={DefaultWTF} />
           <Route path='/littleFoot' component={LittleFoot} />
           <Route path='/seakura' component={Seakura} />
+          <Route path='/eNewsletter' component={ENewsletter} />
         </Switch>
         <Footer />
       </ScrollToTop>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import babel1 from '../../assets/images/babel/babel-businesscard-mock.jpg'
@@ -43,6 +44,10 @@ class Babel extends Component {
                 <img className="project__image" alt="Babel" src={babel7}></img>
                 <img className="project__image" alt="Babel" src={babel8}></img>
 
+                <div className="project__nav">
+                    <Link to='/littleFoot' className="project__last">&lt; Last Project: Little Foot</Link>
+                    <Link to='/defaultWTF' className="project__next">Next Project: Default.wtf &gt;</Link>
+                </div>
             </section>
         );
     }

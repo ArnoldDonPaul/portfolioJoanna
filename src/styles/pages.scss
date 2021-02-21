@@ -60,6 +60,21 @@ body {
     &__multiImage {
         width: 48%;
     }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 15px;
+        text-decoration: underline;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 2.5vw;
+    }
+    &__last {
+        color: black;
+    }
+    &__next {
+        color: black;
+    }
     @include tablet {
         &__title {
             font-size: 4.5vw;
@@ -84,6 +99,15 @@ body {
         &__multiImage {
             width: 35%;
             margin: 20px auto;
+        }
+        &__nav {
+            margin: 0 55px;
+        }
+        &__last:hover {
+            opacity: 0.5;
+        }
+        &__next:hover {
+            opacity: 0.5;
         }
     }
 }

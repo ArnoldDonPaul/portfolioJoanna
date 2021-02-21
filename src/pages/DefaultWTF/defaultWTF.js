@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import defaultWTF1 from '../../assets/images/defaultWTF/cyborg_web.gif'
@@ -47,6 +48,11 @@ class DefaultWTF extends Component {
                     <img className="project__multiImage" alt="DefaultWTF" src={defaultWTF8}></img>
                 </div>
                 <img className="project__image" alt="DefaultWTF" src={defaultWTF9}></img>
+            
+                <div className="project__nav">
+                    <Link to='/babel' className="project__last">&lt; Last Project: Babel</Link>
+                    <Link to='/buffo' className="project__next">Next Project: Buffo &gt;</Link>
+                </div>
             </section>
         );
     }

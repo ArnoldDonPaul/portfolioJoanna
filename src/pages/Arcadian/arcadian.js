@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
 import arcadian1 from '../../assets/images/arcadian/p1.jpg'
@@ -33,6 +34,11 @@ class Arcadian extends Component {
                 <img className="project__image" alt="Arcadian" src={arcadian2}></img>
                 <img className="project__image" alt="Arcadian" src={arcadian3}></img>
                 <img className="project__image" alt="Arcadian" src={arcadian4}></img>
+
+                <div className="project__nav">
+                    <Link to='/bannock' className="project__last">&lt; Last Project: Bannock</Link>
+                    <Link to='/eNewsletter' className="project__next">Next Project: E-Newsletter &gt;</Link>
+                </div>
             </section>
         );
     }
