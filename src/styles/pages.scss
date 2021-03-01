@@ -63,7 +63,7 @@ body {
     &__nav {
         display: flex;
         justify-content: space-between;
-        margin: 0 15px;
+        margin: 20px 15px;
         text-decoration: underline;
         font-family: 'Work Sans', sans-serif;
         font-weight: lighter;
@@ -101,7 +101,7 @@ body {
             margin: 20px auto;
         }
         &__nav {
-            margin: 0 55px;
+            margin: 20px 55px;
         }
         &__last:hover {
             opacity: 0.5;

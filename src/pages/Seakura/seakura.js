@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
-import seakura1 from '../../assets/images/seakura/Seakura-logo.jpg'
-import seakura2 from '../../assets/images/seakura/Seakura-logo.jpg'
+import seakura1 from '../../assets/images/seakura/Seakura-SOCIAL_1.jpg'
+import seakura2 from '../../assets/images/seakura/seakura_grid.png'
 
 class Seakura extends Component {
     render() {

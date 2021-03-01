@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/pages.scss';
 
-import babel2 from '../../assets/images/babel/LODP0302.jpg'
-import babel3 from '../../assets/images/babel/babel-friends-family-9031.jpg'
+import babel2 from '../../assets/images/eNewsletter/Valentines-Eblast.jpg'
+import babel3 from '../../assets/images/eNewsletter/Eblast-HolidayParty-October2019Artboard 1.jpg'
 
 class ENewsletter extends Component {
     render() {

@@ -11,7 +11,7 @@ import canteenHero from '../../assets/images/canteen/canteen-live-eat-1618.jpg'
 import defaultwtfHero from '../../assets/images/defaultWTF/Chrome-Browser.gif'
 import babelHero from '../../assets/images/babel/babel-businesscard-mock.jpg'
 import seakuraHero from '../../assets/images/seakura/Seakura-logo.jpg'
-import eNewsletterHero from '../../assets/images/seakura/Seakura-logo.jpg'
+import eNewsletterHero from '../../assets/images/eNewsletter/youvegotmail.jpg'
 
 
 class Projects extends Component {
