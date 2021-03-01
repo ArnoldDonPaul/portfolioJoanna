@@ -14,6 +14,10 @@ import defaultWTF9 from '../../assets/images/defaultWTF/IMG_5554.jpg'
 
 class DefaultWTF extends Component {
     render() {
+        const openInNewTab = (url) => {
+            const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+            if (newWindow) newWindow.opener = null
+        }
         return (
             <section className="project">
                 <h1 className="project__title">default.wtf</h1>
@@ -33,7 +37,7 @@ class DefaultWTF extends Component {
                     </p>
                 </div>
                 <div className="project__textBox">
-                    <p>LINK</p>
+                    <p className="extensionLink" onClick={() => { openInNewTab('https://chrome.google.com/webstore/detail/defaultme/kjdpphlgcoeoinnaajjjnbahlgldaipd?authuser=1&hl=en-US') }}>Default.me Chrome Extension Link {">"}</p>
                 </div>
 
                 <img className="project__image" alt="DefaultWTF" src={defaultWTF2}></img>
@@ -48,7 +52,7 @@ class DefaultWTF extends Component {
                     <img className="project__multiImage" alt="DefaultWTF" src={defaultWTF8}></img>
                 </div>
                 <img className="project__image" alt="DefaultWTF" src={defaultWTF9}></img>
-            
+
                 <div className="project__nav">
                     <Link to='/babel' className="project__last">&lt; Last Project: Babel</Link>
                     <Link to='/buffo' className="project__next">Next Project: Buffo &gt;</Link>

@@ -33,6 +33,10 @@
         font-weight: lighter;
         margin: 0 auto 30px;
     }
+    &__info:hover {
+        opacity: 0.5;
+        cursor: pointer;  
+    }
     &__dropDown {
         animation: growDown 300ms ease-in-out forwards;
         transform-origin: top center;
@@ -76,10 +80,6 @@
         &__info {
             margin: 0 25px;
         }
-        &__info:hover {
-            opacity: 0.5;
-            cursor: pointer;  
-        }
         &__contactBox {
             &--mobile {
                 display: none;
@@ -103,11 +103,9 @@
     color: black;
 }
 
-@include tablet {
-    .contactLink:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
+.contactLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .textBold {

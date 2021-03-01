@@ -16,6 +16,23 @@ body {
     justify-content: space-between;
 }
 
+.extensionLink {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 4.5vw;
+    margin: 0 20px 20px;
+    cursor: pointer;
+    @include tablet {
+        width: 85%;
+        font-size: 2.25vw;
+        margin: 0 auto;
+    }
+}
+
+.extensionLink:hover {
+    opacity: 0.5;
+}
+
 .prototype {
     width: 100%;
     height: 1100px;
@@ -75,6 +92,12 @@ body {
     &__next {
         color: black;
     }
+    &__last:hover {
+        opacity: 0.5;
+    }
+    &__next:hover {
+        opacity: 0.5;
+    }
     @include tablet {
         &__title {
             font-size: 4.5vw;
@@ -102,12 +125,6 @@ body {
         }
         &__nav {
             margin: 20px 55px;
-        }
-        &__last:hover {
-            opacity: 0.5;
-        }
-        &__next:hover {
-            opacity: 0.5;
         }
     }
 }

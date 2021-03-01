@@ -50,12 +50,9 @@
         width: 100%;
         height: auto;
         margin: 20px auto 0;
-        &--zoomed {
-            width: 100%;
-        }
     }
     @include tablet {
-        margin: 50px auto;
+        margin: 0 auto;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -83,14 +80,6 @@
             width: 40%;
             margin-left: auto;
             margin-right: 50px;
-            cursor: zoom-in;
-            &--zoomed {
-                width: 80%;
-                margin: 0 auto;
-                cursor: zoom-out;
-                display: flex;
-                justify-self: center;
-            }
         }
         &__textBox {
             margin-right: auto;
@@ -98,10 +87,6 @@
             &--mobile {
                 display: none;
             }
-        }
-        .projectBox:hover {
-            opacity: 0.5;
-            z-index: 0;
         }
     }
     @include desktop {
@@ -119,14 +104,6 @@
     }
 }
 
-.pageLink {
-    position: absolute;
-    background-color: red;
-    // opacity: 0;
-    margin-left: -50%;
-    width: 100%;
-    height: inherit;
-    @include tablet {
-        display: none;
-    }
+.projectBox:hover{
+    opacity: 0.5;
 }
