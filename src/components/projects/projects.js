@@ -15,23 +15,10 @@ import eNewsletterHero from '../../assets/images/eNewsletter/youvegotmail.jpg'
 
 
 class Projects extends Component {
-    state = {
-        canteenZoomed: false,
-        littlefootZoomed: false,
-        babelZoomed: false,
-        defaultwtfZoomed: false,
-        buffoZoomed: false,
-        seakuraZoomed: false,
-        bannockZoomed: false,
-        arcadianZoomed: false,
-        eNewsletterZoomed: false
-    }
     render() {
         return (
             <>
-
                 {/* Canteen */}
-
                 <Link className="link" to='/canteen'>
                     <div className="projectBox">
                         <div className="projectBox__textBox">
@@ -43,16 +30,13 @@ class Projects extends Component {
                     </div>
                 </Link>
 
-
                 {/* Little Foot */}
                 <Link className="link" to='/littleFoot'>
                     <div className="projectBox">
                         <div className="projectBox__textBox">
-
                             <h1 className="projectBox__title">little foot</h1>
                             <h2 className="projectBox__subtitle">ui / ux</h2>
                             <h3 className="projectBox__link">view project {">"}</h3>
-
                         </div>
                         <img className="projectBox__image" src={littlefootHero} alt="little foot"></img>
                     </div>
@@ -70,7 +54,6 @@ class Projects extends Component {
                     </div>
                 </Link>
 
-
                 {/* Default.wtf */}
                 <Link className="link" to='/defaultWTF'>
                     <div className="projectBox">
@@ -79,12 +62,11 @@ class Projects extends Component {
                             <h2 className="projectBox__subtitle">web extension / thesis</h2>
                             <h3 className="projectBox__link">view project {">"}</h3>
                         </div>
-                        <img className="projectBox__image" src={defaultwtfHero} alt="default.wtf" onClick={() => this.setState({ defaultwtfZoomed: true })}></img>
+                        <img className="projectBox__image" src={defaultwtfHero} alt="default.wtf"></img>
                     </div>
                 </Link>
 
                 {/* Buffo */}
-
                 <Link className="link" to='/buffo'>
                     <div className="projectBox">
                         <div className="projectBox__textBox">
@@ -92,12 +74,11 @@ class Projects extends Component {
                             <h2 className="projectBox__subtitle">branding / typography</h2>
                             <h3 className="projectBox__link">view project {">"}</h3>
                         </div>
-                        <img className="projectBox__image" src={buffoHero} alt="buffo" onClick={() => this.setState({ buffoZoomed: true })}></img>
+                        <img className="projectBox__image" src={buffoHero} alt="buffo"></img>
                     </div>
                 </Link>
 
                 {/* Seakura */}
-
                 <Link className="link" to='/seakura'>
                     <div className="projectBox">
                         <div className="projectBox__textBox">
@@ -105,13 +86,11 @@ class Projects extends Component {
                             <h2 className="projectBox__subtitle">branding / social media</h2>
                             <h3 className="projectBox__link">view project {">"}</h3>
                         </div>
-                        <img className="projectBox__image" src={seakuraHero} alt="seakura" onClick={() => this.setState({ seakuraZoomed: true })}></img>
+                        <img className="projectBox__image" src={seakuraHero} alt="seakura"></img>
                     </div>
                 </Link>
 
-
                 {/* Bannock */}
-
                 <Link className="link" to='/bannock'>
                     <div className="projectBox">
                         <div className="projectBox__textBox">
@@ -119,12 +98,11 @@ class Projects extends Component {
                             <h2 className="projectBox__subtitle">menu / art direction</h2>
                             <h3 className="projectBox__link">view project {">"}</h3>
                         </div>
-                        <img className="projectBox__image" src={bannockHero} alt="bannock" onClick={() => this.setState({ bannockZoomed: true })}></img>
+                        <img className="projectBox__image" src={bannockHero} alt="bannock"></img>
                     </div>
                 </Link>
 
                 {/* Arcadian */}
-
                 <Link className="link" to='/arcadian'>
                     <div className="projectBox">
                         <div className="projectBox__textBox">
@@ -132,7 +110,7 @@ class Projects extends Component {
                             <h2 className="projectBox__subtitle">menu / typography</h2>
                             <h3 className="projectBox__link">view project {">"}</h3>
                         </div>
-                        <img className="projectBox__image" src={arcadianHero} alt="arcadian" onClick={() => this.setState({ arcadianZoomed: true })}></img>
+                        <img className="projectBox__image" src={arcadianHero} alt="arcadian"></img>
                     </div>
                 </Link>
 
@@ -145,7 +123,7 @@ class Projects extends Component {
                             <h2 className="projectBox__subtitle">design / typography / copywriting</h2>
                             <h3 className="projectBox__link">view project {">"}</h3>
                         </div>
-                        <img className="projectBox__image" src={eNewsletterHero} alt="e-newsletters" onClick={() => this.setState({ eNewsletterZoomed: true })}></img>
+                        <img className="projectBox__image" src={eNewsletterHero} alt="e-newsletters"></img>
                     </div>
                 </Link>
 
